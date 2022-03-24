@@ -12,12 +12,12 @@ export const mockMappedReactionsDuplicatesFilteredOut = [
   {
     userId: '3',
     jobId: '1',
-    direction: false,
+    direction: true,
   },
   {
     userId: '1',
     jobId: '2',
-    direction: false,
+    direction: true,
   },
   {
     userId: '2',
@@ -42,7 +42,7 @@ export const mockMappedReactionsDuplicatesFilteredOut = [
   {
     userId: '3',
     jobId: '3',
-    direction: false,
+    direction: true,
   },
   {
     userId: '1',

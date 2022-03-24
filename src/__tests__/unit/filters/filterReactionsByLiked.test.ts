@@ -1,12 +1,13 @@
 
 import filterReactionsByLiked from '../../../filters/filterReactionsByLiked';
-import {mockParsedCsvData} from '../../fixture/mockCsvData';
 import {mockParsedCsvDataFilteredByLiked}
   from '../../fixture/mockCsvDataFilteredByLiked';
+import {mockParsedCsvDataWithoutTimeDate}
+  from '../../fixture/mockCsvDataWithoutTimeDate';
 
 describe('[filterReactionsByLikes]', () => {
   it('should return a list of reactions filtered by direction "true"', () => {
-    expect(filterReactionsByLiked(mockParsedCsvData))
+    expect(filterReactionsByLiked(mockParsedCsvDataWithoutTimeDate))
         .toEqual(mockParsedCsvDataFilteredByLiked);
   });
 });

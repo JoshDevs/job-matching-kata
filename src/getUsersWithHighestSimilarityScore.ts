@@ -1,11 +1,10 @@
 import handleCsvData from './handleCsvData';
-import {HighestScoringUsers} from './model/HighestScoringUsers';
+import {SimilarityData} from './model/SimilarityData';
 import {Reaction} from './schema/Reaction';
 
 const getUsersWithHighestSimilarityScore =
-(parsedCsvData: Reaction[]): HighestScoringUsers => {
-  handleCsvData(parsedCsvData);
-  return {} as HighestScoringUsers;
+(parsedCsvData: Reaction[]): SimilarityData => {
+  return handleCsvData(parsedCsvData);
 };
 
 export default getUsersWithHighestSimilarityScore;

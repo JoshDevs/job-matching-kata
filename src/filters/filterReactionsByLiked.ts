@@ -1,8 +1,10 @@
-import {Reaction} from '../schema/Reaction';
+import {ReactionWithoutTimeDate} from '../model/Reaction';
 
 
-const filterReactionsByLiked = (parsedCsvData: Reaction[]): Reaction[] => {
-  return parsedCsvData.filter((reaction) => reaction.direction === true);
+const filterReactionsByLiked =
+(parsedCsvData: ReactionWithoutTimeDate[]): ReactionWithoutTimeDate[] => {
+  return parsedCsvData
+      .filter((reaction) => Boolean(reaction.direction) === true);
 };
 
 export default filterReactionsByLiked;
