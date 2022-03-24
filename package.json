@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx ts-node src/index.ts",
     "test": "jest",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "type:check": "tsc --noEmit --skipLibCheck"
   },
   "repository": {
     "type": "git",

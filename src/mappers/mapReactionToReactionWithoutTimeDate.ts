@@ -9,7 +9,7 @@ const mapReactionToReactionWithoutTimeDate =
   parsedCsvData.forEach((reaction) => mappedCsvData.push({
     userId: reaction.userId,
     jobId: reaction.jobId,
-    direction: Boolean(reaction.direction),
+    direction: reaction.direction.toLowerCase() === 'true' ? true : false,
   }));
 
   return mappedCsvData;

@@ -8,9 +8,9 @@ describe('[getUsersWithHighestSimilarityScore]', () => {
 
     expect(getUsersWithHighestSimilarityScore(data))
         .toEqual({
-          userOne: '5265',
-          userTwo: '4311',
-          similarityScore: 234,
+          userOne: '5193',
+          userTwo: '1791',
+          similarityScore: 181,
         });
   });
 });

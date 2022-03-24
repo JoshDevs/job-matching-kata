@@ -5,8 +5,8 @@ import {mockParsedCsvData} from '../fixture/mockCsvData';
 
 
 const mockResult = {
-  userOne: '2',
-  userTwo: '3',
+  userOne: '4',
+  userTwo: '5',
   similarityScore: 4,
 };
 

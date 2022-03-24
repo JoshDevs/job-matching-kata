@@ -9,6 +9,6 @@ describe('[generateUniqueUserList]', () => {
         expect(generateUniqueUserList(
             mockMappedReactionsDuplicatesFilteredOut,
         ))
-            .toEqual(['1', '2', '3']);
+            .toEqual(['1', '2', '3', '4', '5']);
       });
 });
