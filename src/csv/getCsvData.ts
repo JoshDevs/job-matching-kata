@@ -2,8 +2,10 @@ import {Reaction} from '../schema/Reaction';
 import fs from 'fs';
 import csv from 'csv-parser';
 import {finished} from 'stream/promises';
+import {Jobs} from '../schema/Jobs';
 
-const getParsedCsvData = async (fileName: string): Promise<Reaction[]> => {
+export const getParsedCsvData =
+async (fileName: string): Promise<Reaction[]> => {
   const result: Reaction[] = [];
   const parser = fs.createReadStream(`./data/${fileName}.csv`)
       .pipe(csv())
@@ -23,4 +25,21 @@ const getParsedCsvData = async (fileName: string): Promise<Reaction[]> => {
   return result;
 };
 
-export default getParsedCsvData;
+export const getParsedCsvJobsData =
+async (fileName: string): Promise<Jobs[]> => {
+  const result: Jobs[] = [];
+  const parser = fs.createReadStream(`./data/${fileName}.csv`)
+      .pipe(csv())
+      .on('readable', () => {
+        let job;
+        while ((job = parser.read()) !== null) {
+          result.push({
+            companyId: job.company_id,
+            jobId: job.job_id,
+          });
+        }
+      });
+
+  await finished(parser);
+  return result;
+};

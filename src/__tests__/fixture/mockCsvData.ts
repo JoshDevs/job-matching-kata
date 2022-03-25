@@ -144,3 +144,38 @@ export const mockParsedCsvData = [
     timeDate: '2022-01-03 01:00:00',
   },
 ];
+
+export const mockParsedJobsData = [
+  {
+    companyId: '1',
+    jobId: '1',
+  },
+  {
+    companyId: '1',
+    jobId: '2',
+  },
+  {
+    companyId: '2',
+    jobId: '3',
+  },
+  {
+    companyId: '2',
+    jobId: '4',
+  },
+  {
+    companyId: '3',
+    jobId: '5',
+  },
+  {
+    companyId: '2',
+    jobId: '6',
+  },
+  {
+    companyId: '1',
+    jobId: '7',
+  },
+  {
+    companyId: '2',
+    jobId: '8',
+  },
+];

@@ -1,14 +1,14 @@
 export const mockJobsLikedByUser = [
   {
-    userId: '1',
+    entityId: '1',
     jobs: ['1', '2', '3', '4'],
   },
   {
-    userId: '2',
+    entityId: '2',
     jobs: ['1', '2', '3', '4'],
   },
   {
-    userId: '3',
+    entityId: '3',
     jobs: ['1', '2', '3', '4'],
   },
 ];

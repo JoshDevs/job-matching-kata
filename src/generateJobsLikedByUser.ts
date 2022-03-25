@@ -1,10 +1,10 @@
-import generateUniqueUserList from './generateUniqueUserList';
-import {JobsLikedByUser} from './model/JobsLikedByUser';
+import generateUniqueList from './generateUniqueList';
+import {JobsLikedByUser} from './model/Base';
 import {ReactionWithoutTimeDate} from './model/Reaction';
 
 const generateJobsLikedByUser =
  (uniqueReactions: ReactionWithoutTimeDate[]): JobsLikedByUser[] => {
-   const uniqueUsers = generateUniqueUserList(uniqueReactions);
+   const uniqueUsers = generateUniqueList(uniqueReactions);
    const jobsLikedByUser: JobsLikedByUser[] = [];
    let jobIds: string[];
    uniqueUsers.forEach((user) => {
@@ -14,7 +14,7 @@ const generateJobsLikedByUser =
          .map((reaction) => reaction.jobId);
 
      jobsLikedByUser.push({
-       userId: user,
+       entityId: user,
        jobs: jobIds,
      });
    });

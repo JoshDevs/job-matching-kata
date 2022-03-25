@@ -1,5 +1,6 @@
 export interface SimilarityData {
-    userOne: string;
-    userTwo: string;
+    entityOne: string;
+    entityTwo: string;
     similarityScore: number;
 };
+

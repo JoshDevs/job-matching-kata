@@ -6,8 +6,8 @@ describe('[findHighestSimilarityScore]', () => {
   it('should find the highest similarity score pairing', () => {
     expect(findHighestSimilarityScore(mockSimilarityScoresByPairs))
         .toEqual({
-          userOne: '1',
-          userTwo: '2',
+          entityOne: '1',
+          entityTwo: '2',
           similarityScore: 4,
         });
   });

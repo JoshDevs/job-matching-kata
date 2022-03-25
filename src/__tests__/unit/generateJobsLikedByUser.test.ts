@@ -1,12 +1,12 @@
 import generateJobsLikedByUser from '../../generateJobsLikedByUser';
-import generateUniqueUserList from '../../generateUniqueUserList';
-import {JobsLikedByUser} from '../../model/JobsLikedByUser';
+import generateUniqueList from '../../generateUniqueList';
+import {JobsLikedByUser} from '../../model/Base';
 import {mockMappedReactionsDuplicatesFilteredOut}
   from '../fixture/mockDuplicatesFilteredOut';
 import {mockJobsLikedByUser} from '../fixture/mockJobsLikedByUser';
 
 jest.mock('../../generateUniqueUserList');
-const mockGenerateUniqueUserList = generateUniqueUserList as jest.Mock;
+const mockGenerateUniqueUserList = generateUniqueList as jest.Mock;
 
 describe('[generatedJobsLikedByUser]', () => {
   let result: JobsLikedByUser[];
